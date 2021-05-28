@@ -1,0 +1,78 @@
+1. First create Railway database and create the following tables in your MySql database .
+
+-> fair               
+-> passengers         
+-> seats              
+-> ticket             
+-> train   
+
+Schema of fair table : 
+
++-------+---------+------+-----+---------+-------+
+| Field | Type    | Null | Key | Default | Extra |
++-------+---------+------+-----+---------+-------+
+| TNO   | char(2) | NO   |     | NULL    |       |
+| A1    | int(11) | YES  |     | NULL    |       |
+| B1    | int(11) | YES  |     | NULL    |       |
+| S1    | int(11) | YES  |     | NULL    |       |
++-------+---------+------+-----+---------+-------+
+
+Schema of passengers table : 
+
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| PID       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| PNAME     | varchar(30) | YES  |     | NULL    |                |
+| PAGE      | int(11)     | YES  |     | NULL    |                |
+| TNO       | char(2)     | NO   |     | NULL    |                |
+| TNAME     | varchar(20) | YES  |     | NULL    |                |
+| DOJ       | date        | YES  |     | NULL    |                |
+| TICKET_NO | int(11)     | NO   | UNI | NULL    |                |
+| COACH     | char(2)     | NO   |     | NULL    |                |
+| SEATS     | int(11)     | NO   |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+Schema of Seats table : 
+
++----------+---------+------+-----+---------+-------+
+| Field    | Type    | Null | Key | Default | Extra |
++----------+---------+------+-----+---------+-------+
+| TNO      | char(2) | YES  |     | NULL    |       |
+| TOTAL_A1 | int(11) | YES  |     | NULL    |       |
+| TOTAL_B1 | int(11) | YES  |     | NULL    |       |
+| TOTAL_S1 | int(11) | YES  |     | NULL    |       |
+| AVAIL_A1 | int(11) | YES  |     | NULL    |       |
+| AVAIL_B1 | int(11) | YES  |     | NULL    |       |
+| AVAIL_S1 | int(11) | YES  |     | NULL    |       |
++----------+---------+------+-----+---------+-------+
+
+Schema of ticket table : 
+
++-----------+---------+------+-----+---------+-------+
+| Field     | Type    | Null | Key | Default | Extra |
++-----------+---------+------+-----+---------+-------+
+| Ticket_No | int(11) | YES  |     | NULL    |       |
+| Price     | int(11) | YES  |     | NULL    |       |
+| STATUS    | char(1) | YES  |     | NULL    |       |
++-----------+---------+------+-----+---------+-------+
+
+
+Schema of train Table : 
+
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| TNO         | char(2)     | NO   | PRI | NULL    |       |
+| TNAME       | varchar(20) | NO   |     | NULL    |       |
+| SOURCE      | varchar(20) | YES  |     | NULL    |       |
+| DESTINATION | varchar(20) | YES  |     | NULL    |       |
+| TOTAL_SEAT  | int(11)     | NO   |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+
+Now you can insert values of your choice in your tables.
+
+
+
+
+
